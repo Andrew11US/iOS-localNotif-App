@@ -17,16 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UAPushNotificationDelegat
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         UAirship.takeOff()
         UAirship.push().userPushNotificationsEnabled = true
         
         UAirship.push().pushNotificationDelegate = self
         return true
-    }
-    
-    func launched(fromNotification notification: [AnyHashable: Any]) {
-        print("Hey we got a notification!")
-        print(notification)
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
