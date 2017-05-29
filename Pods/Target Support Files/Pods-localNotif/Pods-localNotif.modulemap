@@ -1,0 +1,6 @@
+framework module Pods_localNotif {
+  umbrella header "Pods-localNotif-umbrella.h"
+
+  export *
+  module * { export * }
+}
